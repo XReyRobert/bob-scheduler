@@ -12,7 +12,7 @@ instructions. The application source and development history remain private.
 GitHub-generated **Source code** ZIP/TAR downloads contain this documentation
 only; download the application ZIP attached to the release instead.
 
-**Current release:** [0.1.9 (prerelease)](https://github.com/XReyRobert/bob-scheduler/releases/tag/v0.1.9).
+**Current release:** [0.1.10 (prerelease)](https://github.com/XReyRobert/bob-scheduler/releases/tag/v0.1.10).
 The universal macOS app is Developer ID signed, Apple notarized and stapled.
 
 ## Installation
@@ -20,7 +20,7 @@ The universal macOS app is Developer ID signed, Apple notarized and stapled.
 The macOS release requires **macOS 13 or later** and supports both Apple Silicon
 and Intel Macs.
 
-1. Download [Bob-Scheduler-0.1.9-universal-macOS.zip](https://github.com/XReyRobert/bob-scheduler/releases/download/v0.1.9/Bob-Scheduler-0.1.9-universal-macOS.zip).
+1. Download [Bob-Scheduler-0.1.10-universal-macOS.zip](https://github.com/XReyRobert/bob-scheduler/releases/download/v0.1.10/Bob-Scheduler-0.1.10-universal-macOS.zip).
 2. Extract **Bob Scheduler.app** and drag it into **Applications**.
 3. Install Bob Shell separately. Its npm launcher also requires Node to be installed.
 4. Open Bob Scheduler and check the Bob executable path in **Settings**. Leave it
@@ -63,6 +63,18 @@ combination without closing the menu. Completed means a paused one-time task
 has finished a run started at or after its scheduled time, including failed
 runs. Recurring tasks remain Active or Paused after each run. Filters combine
 with name search, and selecting no statuses shows an empty list.
+
+### Advanced task options
+
+Use **Advanced options** just below the task name to jump to the task's advanced
+settings. The bordered section lists its controls and opens automatically when
+the task has saved advanced settings. Collapsing it preserves your edits.
+
+**Disable MCP** (`--disable-mcp`) and **Disable subagents** (`--disable-subagents`)
+have dedicated checkboxes and work with your saved Bob Shell login. **Extra
+arguments** accepts other CLI flags for API-key jobs. The section also contains
+execution limits, output options and environment variables, with authentication
+requirements explained beside the controls.
 
 ## Settings
 
@@ -159,6 +171,9 @@ Supported Bob 2 flags include `--mode`, `--trust`, `--accept-license`,
 `--max-turns`, `--max-cost`, `--format`, `--log-level`, `--disable-tool-groups`,
 `--disable-mcp`, `--disable-subagents` and `--team-id` for API-key jobs, which use
 `bob run`. The legacy sandbox checkbox disables the `edit` and `execute` tool groups.
+These tool restrictions and the working directory setting do not provide
+OS-level filesystem isolation. Workspace sandboxing is not implemented in this
+release.
 
 Login-based jobs support mode, trust/license preferences, log level, Disable MCP,
 Disable subagents and the scheduler's timeout. Bob Shell 2.0.6's ACP interface does
@@ -198,7 +213,7 @@ The server follows history folder changes without needing to restart.
 ## Downloads and updates
 
 Check [Releases](https://github.com/XReyRobert/bob-scheduler/releases) for updates. Quit Bob Scheduler
-before replacing the app in Applications; your tasks and history stay in Bob's home folder. Back up that folder before updating. Version 0.1.9 is a prerelease.
+before replacing the app in Applications; your tasks and history stay in Bob's home folder. Back up that folder before updating. Version 0.1.10 is a prerelease.
 
 The application ZIP is the only uploaded release asset. It includes the MCP
 server, runtime, installer, configuration examples and agent instructions. See
@@ -206,11 +221,11 @@ the [MCP setup guide](docs/mcp.md) or [agent setup guide](docs/mcp-agents.md).
 Notices, SBOMs and corresponding third-party library sources are included in the
 app under **Help → Open Source Licenses**.
 
-To verify version 0.1.9, run
-`shasum -a 256 Bob-Scheduler-0.1.9-universal-macOS.zip`. Its SHA-256 is:
+To verify version 0.1.10, run
+`shasum -a 256 Bob-Scheduler-0.1.10-universal-macOS.zip`. Its SHA-256 is:
 
 ```text
-f70a0d9f351a58ba58818135825784109932dff23f4dd6472f70746018c6c5b9
+c6cdd6f41683ab1dd5b62305cc1cc2f81b3b6de1c810485c1b11eefe5ea3c64b
 ```
 
 ## License
