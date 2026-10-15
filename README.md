@@ -12,7 +12,7 @@ instructions. The application source and development history remain private.
 GitHub-generated **Source code** ZIP/TAR downloads contain this documentation
 only; download the application ZIP attached to the release instead.
 
-**Current release:** [0.1.10 (prerelease)](https://github.com/XReyRobert/bob-scheduler/releases/tag/v0.1.10).
+**Current release:** [0.1.11 (prerelease)](https://github.com/XReyRobert/bob-scheduler/releases/tag/v0.1.11).
 The universal macOS app is Developer ID signed, Apple notarized and stapled.
 
 ## Installation
@@ -20,7 +20,7 @@ The universal macOS app is Developer ID signed, Apple notarized and stapled.
 The macOS release requires **macOS 13 or later** and supports both Apple Silicon
 and Intel Macs.
 
-1. Download [Bob-Scheduler-0.1.10-universal-macOS.zip](https://github.com/XReyRobert/bob-scheduler/releases/download/v0.1.10/Bob-Scheduler-0.1.10-universal-macOS.zip).
+1. Download [Bob-Scheduler-0.1.11-universal-macOS.zip](https://github.com/XReyRobert/bob-scheduler/releases/download/v0.1.11/Bob-Scheduler-0.1.11-universal-macOS.zip).
 2. Extract **Bob Scheduler.app** and drag it into **Applications**.
 3. Install Bob Shell separately. Its npm launcher also requires Node to be installed.
 4. Open Bob Scheduler and check the Bob executable path in **Settings**. Leave it
@@ -69,6 +69,8 @@ with name search, and selecting no statuses shows an empty list.
 Use **Advanced options** just below the task name to jump to the task's advanced
 settings. The bordered section lists its controls and opens automatically when
 the task has saved advanced settings. Collapsing it preserves your edits.
+Saving applies the latest task values to the editor before completing, so
+reopening the task retains its advanced settings.
 
 **Disable MCP** (`--disable-mcp`) and **Disable subagents** (`--disable-subagents`)
 have dedicated checkboxes and work with your saved Bob Shell login. **Extra
@@ -213,7 +215,7 @@ The server follows history folder changes without needing to restart.
 ## Downloads and updates
 
 Check [Releases](https://github.com/XReyRobert/bob-scheduler/releases) for updates. Quit Bob Scheduler
-before replacing the app in Applications; your tasks and history stay in Bob's home folder. Back up that folder before updating. Version 0.1.10 is a prerelease.
+before replacing the app in Applications; your tasks and history stay in Bob's home folder. Back up that folder before updating. Version 0.1.11 is a prerelease.
 
 The application ZIP is the only uploaded release asset. It includes the MCP
 server, runtime, installer, configuration examples and agent instructions. See
@@ -221,11 +223,11 @@ the [MCP setup guide](docs/mcp.md) or [agent setup guide](docs/mcp-agents.md).
 Notices, SBOMs and corresponding third-party library sources are included in the
 app under **Help → Open Source Licenses**.
 
-To verify version 0.1.10, run
-`shasum -a 256 Bob-Scheduler-0.1.10-universal-macOS.zip`. Its SHA-256 is:
+To verify version 0.1.11, run
+`shasum -a 256 Bob-Scheduler-0.1.11-universal-macOS.zip`. Its SHA-256 is:
 
 ```text
-c6cdd6f41683ab1dd5b62305cc1cc2f81b3b6de1c810485c1b11eefe5ea3c64b
+8b56e87551b23c92333942ec9f5ef890d1f350d5d6e243334767e275e66f3ef8
 ```
 
 ## License

@@ -30,7 +30,7 @@ redistributing the application.
 
 ## Runtime library source availability
 
-Version 0.1.10 uses Electron 44.7.0, Chromium 152.0.7977.130 and Node.js 24.21.0.
+Version 0.1.11 uses Electron 44.7.0, Chromium 152.0.7977.130 and Node.js 24.21.0.
 FFmpeg is LGPL-2.1-or-later. Its matching Chromium source revision is
 `2b68d2babae73714846961fb0ee47e3b3d2e39a9`; its source archive and the matching
 Electron source/build patches are included under
