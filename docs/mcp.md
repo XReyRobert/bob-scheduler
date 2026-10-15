@@ -29,7 +29,7 @@ The app download contains everything needed for this setup. **Show agent
 instructions** reveals the included guide in Finder. The same information is
 available without the UI under `Contents/Resources/mcp/AGENTS.md`, with an index
 at `Contents/Resources/AGENTS.md` and this guide at
-`Contents/Resources/mcp/README.md`. The separate MCP ZIP is optional.
+`Contents/Resources/mcp/README.md`.
 
 For manual setup, use this executable as the MCP client's command:
 
@@ -51,15 +51,12 @@ Bob Scheduler MCP symlink and refuses to overwrite unrelated files or links.
 It does not edit client configuration or API keys. Use absolute paths when
 configuring clients; they may not inherit your terminal's PATH.
 
-The separate **Bob-Scheduler-MCP-&lt;version&gt;-macOS.zip** contains the same
-installer, configuration examples, this guide, `AGENTS.md` and the MIT license. Install
-the app first, then run `sh install.sh` from the extracted setup folder.
-The setup ZIP uses the installed app's runtime; keep the app installed.
+The MCP uses the installed app's runtime; keep the app installed.
 
 For a different app location or command directory:
 
 ```bash
-sh install.sh --app "/Users/yourname/Applications/Bob Scheduler.app" --bin-dir "/Users/yourname/.local/bin"
+sh "/Users/yourname/Applications/Bob Scheduler.app/Contents/Resources/mcp/install.sh" --app "/Users/yourname/Applications/Bob Scheduler.app" --bin-dir "/Users/yourname/.local/bin"
 ```
 
 If the app moves, rerun the installer with its new path and update any client
@@ -93,8 +90,9 @@ Generate Bob Shell's configuration with its explicit stdio transport type:
 
 Merge that entry into Bob Shell's `mcp.json`, either in its user configuration
 (`~/.bob/mcp.json` by default) or the workspace's `.bob/mcp.json`. Preserve other
-servers and the existing schema declaration. The setup ZIP also includes
-`config/bob.json`. Restart or reload Bob's MCP connections after saving.
+servers and the existing schema declaration. The installed app includes an
+example at `Contents/Resources/mcp/config/bob.json`. Restart or reload Bob's MCP
+connections after saving.
 
 ### Claude Desktop
 
@@ -139,5 +137,6 @@ stdout and diagnostics to stderr; Claude Desktop's MCP logs are in
 
 ## License
 
-Licensed under the MIT License. The setup ZIP includes `LICENSE`.
+Licensed under the MIT License. The app includes the license at
+`Contents/Resources/legal/LICENSE`.
 Copyright © 2026 Xavier Rey-Robert.

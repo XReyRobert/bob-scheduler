@@ -13,9 +13,8 @@ that app, including spaces or a relocated name. Do not assume `/Applications`.
 An additional index is at `Contents/Resources/AGENTS.md`; the human guide is
 `Contents/Resources/mcp/README.md`.
 
-The optional MCP setup ZIP also includes this guide, but contains no app or
-runtime. In that case locate the user's installed app first. A typical location
-is `/Applications/Bob Scheduler.app`.
+Locate the user's installed app first. A typical location is
+`/Applications/Bob Scheduler.app`.
 
 ## Generate the client configuration
 

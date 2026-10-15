@@ -200,14 +200,18 @@ The server follows history folder changes without needing to restart.
 Check [Releases](https://github.com/XReyRobert/bob-scheduler/releases) for updates. Quit Bob Scheduler
 before replacing the app in Applications; your tasks and history stay in Bob's home folder. Back up that folder before updating. Version 0.1.9 is a prerelease.
 
-Each release provides the app ZIP, an optional MCP setup ZIP, shipped/build
-CycloneDX SBOMs, third-party notices and corresponding library sources,
-SHA256SUMS and a validation report. The MCP server and its agent instructions
-are already included in the app. See the [agent setup guide](docs/mcp-agents.md).
+The application ZIP is the only uploaded release asset. It includes the MCP
+server, runtime, installer, configuration examples and agent instructions. See
+the [MCP setup guide](docs/mcp.md) or [agent setup guide](docs/mcp-agents.md).
+Notices, SBOMs and corresponding third-party library sources are included in the
+app under **Help → Open Source Licenses**.
 
-To verify a download, obtain SHA256SUMS from the same release, run
-`shasum -a 256 Bob-Scheduler-0.1.9-universal-macOS.zip`, and compare its result
-with the matching filename in SHA256SUMS.
+To verify version 0.1.9, run
+`shasum -a 256 Bob-Scheduler-0.1.9-universal-macOS.zip`. Its SHA-256 is:
+
+```text
+f70a0d9f351a58ba58818135825784109932dff23f4dd6472f70746018c6c5b9
+```
 
 ## License
 
@@ -216,7 +220,6 @@ these downloads does not publish the application's development source tree.
 Copyright (c) 2026 Xavier Rey-Robert.
 
 Third-party components retain their own licenses. Open **Help → Open Source
-Licenses** for the included notices, SBOMs and library sources. The release's
-**Open-Source ZIP** contains third-party notices and corresponding Electron/FFmpeg
-library sources; it does not contain Bob Scheduler's application source tree.
+Licenses** for the included notices, SBOMs and corresponding Electron/FFmpeg
+library sources.
 See [license and dependency information](docs/licensing.md).
